@@ -1,0 +1,27 @@
+kind: "Deployment"
+apiVersion: "apps/v1"
+metadata:
+  name: productms
+  namespace: nlilaramani-dev
+  labels:
+    app: productms
+spec:
+  selector:
+    matchLabels:
+      app: productms
+  template: 
+    metadata:
+      labels:
+        app: productms
+    spec:
+      containers:
+        - name: productms
+          image: nlpappu/repo:productms
+          ports:
+            - containerPort: 8080
+              protocol: "TCP"
+  replicas: 3 
+  strategy: 
+    type: RollingUpdate
+  revisionHistoryLimit: 2 
+  minReadySeconds: 0 

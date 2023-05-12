@@ -1,0 +1,28 @@
+kind: "Deployment"
+apiVersion: "apps/v1"
+metadata:
+  name: {{ .Release.Name }}-productms
+  namespace: nlilaramani-dev
+  labels:
+    app: productms
+spec:
+  selector:
+    matchLabels:
+      app: productms
+  template: 
+    metadata:
+      labels:
+        app: productms
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8080
+              protocol: "TCP"
+  replicas: {{ .Values.replicaCount }}
+  strategy: 
+    type: RollingUpdate
+  revisionHistoryLimit: 2 
+  minReadySeconds: 0 
