@@ -74,14 +74,14 @@
                     </execution>
                 </executions>
             </plugin>
-            <resources>
+        </plugins>
+        <resources>
                 <resource>
                     <directory>src/main/resources</directory>
                     <includes>
                         <include>**/*.properties</include>
                     </includes>
                 </resource>
-            </resources>
-        </plugins>
+       </resources>
     </build>
 </project>
