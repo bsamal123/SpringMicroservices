@@ -20,7 +20,7 @@ spec:
           ports:
             - containerPort: 8080
               protocol: "TCP"
-  replicas: 3 
+  replicas: 2
   strategy: 
     type: RollingUpdate
   revisionHistoryLimit: 2 
