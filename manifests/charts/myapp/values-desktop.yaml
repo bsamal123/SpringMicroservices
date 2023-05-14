@@ -5,10 +5,10 @@
 replicaCount: 2
 
 image:
-  repository: nlpappu/repo:productms
+  repository: nlpappu/repo
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "productms"
 
 service:
   name: productms
