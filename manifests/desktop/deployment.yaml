@@ -16,11 +16,11 @@ spec:
     spec:
       containers:
         - name: productms
-          image: nlpappu/repo:productms
+          image: nlpappu/repo:productms1
           ports:
             - containerPort: 8080
               protocol: "TCP"
-  replicas: 3 
+  replicas: 3
   strategy: 
     type: RollingUpdate
   revisionHistoryLimit: 2 

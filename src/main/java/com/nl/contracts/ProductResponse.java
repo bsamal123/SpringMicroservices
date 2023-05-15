@@ -1,10 +1,20 @@
 package com.nl.contracts;
 
+import com.nl.data.entity.Product;
+
 public class ProductResponse {
-    private int id;
+    private long id;
     private String name;
     private String description;
 
+    public ProductResponse(Product p){
+        this.id = p.getId();
+        this.name = p.getName();
+        this.description = p.getDescription();
+        this.category = p.getCategory();
+        this.price = p.getPrice();
+        this.isAvailable = p.isAvailable();
+    }
     public ProductResponse(int id, String name, String description, String category, double price, boolean isAvailable) {
         this.id = id;
         this.name = name;
@@ -19,11 +29,11 @@ public class ProductResponse {
 
     private String category;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
