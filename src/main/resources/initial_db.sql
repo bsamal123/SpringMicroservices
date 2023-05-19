@@ -4,6 +4,7 @@ create table ecom.Products (
     name character varying(255) not null,
     description character varying(2000),
     price double precision,
+    category character varying(50),
     available boolean
 );
 insert into ecom.Products(name,description,price,category,available)
