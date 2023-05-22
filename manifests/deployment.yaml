@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: productms
-          image: image-registry.openshift-image-registry.svc:5000/nlilaramani-dev/productms
+          image: image-registry.openshift-image-registry.svc:5000/bsamal-dev/productms
           ports:
             - containerPort: 8080
               protocol: "TCP"
