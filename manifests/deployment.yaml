@@ -2,7 +2,7 @@ kind: "Deployment"
 apiVersion: "apps/v1"
 metadata:
   name: productms
-  namespace: nlilaramani-dev
+  namespace: bsamal-dev
   labels:
     app: productms
 spec:
